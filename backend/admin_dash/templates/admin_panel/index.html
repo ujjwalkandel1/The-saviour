@@ -1,0 +1,200 @@
+{% load static %}
+{% block contents %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar using CSS</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <aside id="sidebar">
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="toggle-btn">
+                <i class="lni lni-grid-alt"></i>
+            </label>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-agenda"></i>
+                        <span>Task</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-protection"></i>
+                        <span>Auth</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-layout"></i>
+                        <span>Packages</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-popup"></i>
+                        <span>Notification</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-cog"></i>
+                        <span>Setting</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-layout"></i>
+                        <span>Page</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main">
+            <div class="dashboard-navbar">
+                <form action="#">
+                    <div class="nav-search">
+                        <input type="text" class="search-query" placeholder="Search...">
+                        <button class="btn" type="button">Search</button>
+                    </div>
+                </form>
+                <div class="navbar-content">
+                    <ul class="main-nav">
+                        <li class="user-link">
+                            <a href="#">
+                                <img src="account.png" alt="Profile" class="avatar">
+                            </a>
+                            <div class="user-link-dropdown">
+                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Statistics & Reports</h2>
+                <div class="dashboard-card">
+                    <div class="card">
+                        <h6 class="title">Deaths</h6>
+                        <h6 class="amount">246</h6>
+                        <div class="badge">
+                            <span class="badge-text">Death report without getting help </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6 class="title">Missing</h6>
+                        <h6 class="amount">1524</h6>
+                        <div class="badge">
+                            
+                            <span class="badge-text">Since Last 4 month they didnt get any help</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6 class="title">Damaged</h6>
+                        <h6 class="amount">3000</h6>
+                        <div class="badge">
+                            
+                            <span class="badge-text">They also didnt get any help.</span>
+                        </div>
+                    </div>
+                </div>
+                <h2>SOS MESSSAGE LIST</h2>
+                <div style="overflow-x:auto;">
+                    <table id="posts">
+                        <thead>
+                            <tr>
+                                <th style="width:5%">SN</th>
+                                <th style="width:25%">Username</th>
+                                <th style="width:20%">Phone Number</th>
+                                <th style="width:30%">SOS Message</th>
+                                <th style="width:20%">Location</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Birendra </td>
+                                <td>9867363773</td>
+                                <td>Help Needed</td>
+                                <td>Parsa-3</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Birendra </td>
+                                <td>9867363773</td>
+                                <td>Help Needed</td>
+                                <td>Bharatpur-11</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Diya </td>
+                                <td>9867368989</td>
+                                <td>Emergency!!!help</td>
+                                <td>Khairahani-1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ujjwal </td>
+                                <td>97387837483</td>
+                                <td>Flood help us</td>
+                                <td>Khairahani-8</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Dikshya</td>
+                                <td>98666666666</td>
+                                <td>I am in danger </td>
+                                <td>lanku-9</td>
+                                
+                            </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-wrap">
+                    <div class="copyright-text">
+                        <p>© Copyright 2023 by <strong>CodzSword</strong></p>
+                    </div>
+                    <ul class="social-icons">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+{% endblock %}
